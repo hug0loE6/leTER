@@ -1,0 +1,15 @@
+stages:          
+  - build
+  - test
+  - deploy
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - mvn package -DskipTests
+
+test-job:
+    stage: test
+    script:
+        - mvn test
+
