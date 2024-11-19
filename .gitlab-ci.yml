@@ -1,3 +1,5 @@
+image: maven:3.8.1-jdk-11-openj9
+
 stages:          
   - build
   - test
@@ -12,4 +14,7 @@ test-job:
     stage: test
     script:
         - mvn test
+    artifacts:
+      paths:
+        - target/
 
