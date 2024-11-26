@@ -27,8 +27,8 @@ seleniumtest-job:
 
 deploiement-job:
     stage: deploy
-    rules:
-        - if: '$CI_COMMIT_BRANCH = "main"'
     script:
         - echo "commit sur la branch main"
+    rules:
+        - if: '$CI_COMMIT_BRANCH = "main"'
 
