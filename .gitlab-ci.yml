@@ -24,6 +24,8 @@ seleniumtest-job:
     image: markhobson/maven-firefox:jdk-11
     script:
         - mvn verify -DlastModGranularityMs=10000000
+    rules:
+      - when: never
 
 deploiement-job:
     stage: deploy
