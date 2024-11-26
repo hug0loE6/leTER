@@ -30,5 +30,5 @@ deploiement-job:
     script:
         - echo "commit sur la branch main"
     rules:
-        - if: '$CI_COMMIT_BRANCH = "main"'
+        - if: $CI_COMMIT_BRANCH = "main"
 
