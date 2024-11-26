@@ -1,9 +1,10 @@
-image: maven:3.8.1-jdk-11-openj9
+image: maven:3.8.1-jdk-11-openj9,
 
 stages:          
   - build
   - test
   - deploy
+  - check
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
@@ -17,5 +18,11 @@ test-job:
     stage: test
     script:
         - mvn test -DlastModGranularityMs=10000000
+
+seleniumtest-job:
+    stage: check
+    image: markhobson/maven-firefox:jdk-11
+    script:
+        - mvn verify -DlastModGranularityMs=10000000
     
 
