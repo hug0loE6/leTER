@@ -27,7 +27,7 @@ public class BaseForTests {
     }
     @BeforeAll
     static void setup() {
-        System.setProperty("webdriver.gecko.driver","/home/nebut/tmp/geckodriver-v0.35.0-linux64/geckodriver");
+        System.setProperty("webdriver.gecko.driver","~/tmp/geckodriver-v0.35.0-linux64/geckodriver");
     }
 
     @BeforeEach

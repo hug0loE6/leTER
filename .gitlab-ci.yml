@@ -25,7 +25,7 @@ seleniumtest-job:
     script:
         - mvn verify -DlastModGranularityMs=10000000
     rules:
-      - when: never
+      - when: always
 
 deploiement-job:
     stage: deploy
