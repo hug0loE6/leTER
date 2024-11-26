@@ -29,8 +29,6 @@ deploiement-job:
     stage: deploy
     rules:
         - if: '$CI_COMMIT_BRANCH = "main"'
-          when: always
-        - when: never
     script:
         - echo "commit sur la branch main"
 
